@@ -1,18 +1,18 @@
 # 🛡️ AI Security Vulnerabilities - 2024 & 2025 Combined Analysis
 
-This repository curates detailed documentation for critical AI-related Common Vulnerabilities and Exposures (CVEs) across **2024 và 2025**, dựa trên phân tích từ Fluency Security và các báo cáo công khai khác.
+This repository curates detailed documentation for critical AI-related Common Vulnerabilities and Exposures (CVEs) across **2024 and 2025**, based on analysis from Fluency Security and other public reports.
 
 ---
 
 ## 📊 Combined AI CVE Statistics: By Category
 
-Dữ liệu kết hợp cho thấy **Prompt Injection** và **RCE** là hai mối đe dọa lớn nhất đối với hệ sinh thái AI/ML.
+The combined data confirms that **Prompt Injection** and **RCE** are the two biggest and most critical threats to the AI/ML ecosystem.
 
 | Vulnerability Category | Count | Examples (Combined 2024 & 2025) |
 | :--- | :--- | :--- |
-| **Prompt Injection / Logic Abuse** | **6** | CVE-2025-32711, CVE-2024-8309, CVE-2024-5565, CVE-2024-12366, CVE-2025-54132, v.v. |
-| **Remote Code Execution (RCE)** | **7** | (Bao gồm RCE từ Prompt Injection, Deserialization, Code Injection, và Container Escape) |
-| **Access Control Issues (Auth/IDOR/Escalation)** | **5** | CVE-2025-51867, CVE-2025-5071, CVE-2025-23359, v.v. |
+| **Prompt Injection / Logic Abuse** | **6** | CVE-2025-32711, CVE-2024-8309, CVE-2024-5565, CVE-2024-12366, CVE-2025-54132, etc. |
+| **Remote Code Execution (RCE)** | **7** | (Includes RCE from Prompt Injection, Deserialization, Code Injection, and Container Escape) |
+| **Access Control Issues (Auth/IDOR/Escalation)** | **5** | CVE-2025-51867, CVE-2025-5071, CVE-2025-23359, etc. |
 | **File / Path Handling / SSRF** | **2** | CVE-2025-54381 (SSRF), CVE-2025-32018 (Path Traversal) |
 | **UI/Script Injection (XSS)** | 1 | CVE-2025-5570 |
 | **Denial of Service (DoS)** | 1 | CVE-2025-6398 |
@@ -21,13 +21,13 @@ Dữ liệu kết hợp cho thấy **Prompt Injection** và **RCE** là hai mố
 
 ## 📋 Complete AI CVE List (2024 & 2025)
 
-| CVE ID | Năm | Product / Vendor | Vulnerability Type |
+| CVE ID | Year | Product / Vendor | Vulnerability Type |
 | :--- | :--- | :--- | :--- |
 | **Prompt Injection & Execution** | | | |
 | CVE-2025-32711 | 2025 | Microsoft 365 Copilot | AI command/prompt injection (**EchoLeak**) |
-| **CVE-2024-8309** | **2024** | **LangChain (GraphCypherQAChain)** | SQL Injection qua Prompt Injection |
-| **CVE-2024-5565** | **2024** | **Vanna.AI** | Prompt injection dẫn đến **RCE** |
-| **CVE-2024-12366** | **2024** | **PandasAI** | Prompt injection dẫn đến **RCE** |
+| **CVE-2024-8309** | **2024** | **LangChain (GraphCypherQAChain)** | SQL Injection via Prompt Injection |
+| **CVE-2024-5565** | **2024** | **Vanna.AI** | Prompt injection leading to **RCE** |
+| **CVE-2024-12366** | **2024** | **PandasAI** | Prompt injection leading to **RCE** |
 | CVE-2025-54132 | 2025 | Cursor AI Editor | Embedded prompt injection |
 | CVE-2025-32018 | 2025 | Cursor AI Editor | Prompt-influenced path traversal |
 | CVE-2025-3248 | 2025 | Langflow | API code injection |
@@ -48,25 +48,24 @@ Dữ liệu kết hợp cho thấy **Prompt Injection** và **RCE** là hai mố
 
 ## 🚨 Key Trends in AI Security (2024-2025)
 
-### 1. Prompt Injection Thống trị và Leo thang Đặc quyền
-Các lỗ hổng Prompt Injection từ năm 2024 (Vanna.AI, PandasAI) đã thiết lập mô hình cho các cuộc tấn công **Ngôn ngữ -> Code Execution**. Xu hướng này tiếp tục vào năm 2025 với các biến thể nguy hiểm hơn như **Zero-click Prompt Injection** (EchoLeak), chứng minh rằng việc thao túng logic ngôn ngữ là vector tấn công hàng đầu.
+### 1. Prompt Injection Dominance and Privilege Escalation
+Prompt Injection vulnerabilities from 2024 (Vanna.AI, PandasAI) established the pattern for **Language-to-Code Execution** attacks. This trend escalated in 2025 with highly sophisticated variants like **Zero-click Prompt Injection** (EchoLeak), proving that manipulating AI's linguistic logic remains a critical attack vector.
 
-### 2. Sự Tập trung vào Cơ sở hạ tầng (Infrastructure Focus)
-Mặc dù Prompt Injection là lỗi logic, nhưng đa số các CVE còn lại tập trung vào các thành phần **hỗ trợ triển khai AI/ML** (như BentoML, NVIDIA RAPIDS, Container Toolkit). Điều này làm nổi bật tầm quan trọng của việc bảo mật **Chuỗi Cung ứng AI** (AI Supply Chain) và các lỗi bảo mật truyền thống như Deserialization và Container Escape trong môi trường AI.
+### 2. Focus on Infrastructure Over Models
+While Prompt Injection is a logic flaw, a majority of other CVEs target the **supporting infrastructure for AI/ML deployment** (e.g., BentoML, NVIDIA RAPIDS, Container Toolkit). This highlights the crucial importance of securing the entire **AI Supply Chain** and tackling traditional security flaws like Deserialization and Container Escape within AI environments.
 
-### 3. Vấn đề "Man-in-the-Prompt"
-Sự xuất hiện của các lỗ hổng như **Prompt-influenced path traversal** trong Cursor AI Editor cho thấy các cuộc tấn công đang dịch chuyển sang nhắm vào các giai đoạn **tiền xử lý dữ liệu** và các lớp trung gian (Man-in-the-Prompt), nơi dữ liệu được chuyển đổi trước khi đến mô hình chính.
+### 3. The "Man-in-the-Prompt" Challenge
+The emergence of flaws like **Prompt-influenced path traversal** in Cursor AI Editor shows that attacks are moving to target the **data preprocessing stages** and intermediate layers (Man-in-the-Prompt), where data is transformed before reaching the core model.
 
 ---
 
-## 💡 Key Insights: Sự Phát triển Nhanh Chóng
+## 💡 Key Insights: Rapid Threat Evolution
 
-* **Tăng cường Mối đe dọa:** Sự xuất hiện của các lỗ hổng **Prompt Injection dẫn đến RCE** và **Zero-click** cho thấy các nhà phát triển AI đang phải đối mặt với các rủi ro hệ thống nghiêm trọng hơn nhiều so với các lỗi ứng dụng thông thường.
-* **Bảo mật Toàn bộ Pipeline:** Dữ liệu chứng minh rằng việc chỉ tập trung vào mô hình AI là không đủ; bảo mật phải được áp dụng cho toàn bộ **AI pipeline**—từ thư viện tính toán (`cuML`) đến nền tảng triển khai (`BentoML`) và các công cụ hỗ trợ (`Cursor`).
+* **Systemic Risk:** The confirmed instances of **Prompt Injection leading to RCE** and **Zero-click** vulnerabilities indicate that AI developers are facing far more serious systemic risks compared to typical application flaws.
+* **Full Pipeline Security:** The data confirms that focusing solely on the AI model is insufficient; security must be applied to the entire **AI pipeline**—from computation libraries (`cuML`) to deployment platforms (`BentoML`) and development tools (`Cursor`).
 
 ---
 
 ## 🔗 Reference
 
 Based on analysis from [Fluency Security - State of AI Vulnerability 2025](https://blogs.fluencysecurity.com/ai-cves-of-2025/)
-```
