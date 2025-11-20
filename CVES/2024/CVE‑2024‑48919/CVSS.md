@@ -19,7 +19,7 @@ This repository contains the full CVSS v4.0 Analysis Report for **CVE-2024-48919
 
 ## 🔎 CVSS v4.0 Score Breakdown
 
-The vulnerability is assigned a Base Score of **9.3** due to its remote exploitability and maximum impact on the vulnerable component, despite the presence of some attack resistance measures.
+The vulnerability is assigned a Base Score of **9.2** due to its remote exploitability and maximum impact on the vulnerable component, despite the presence of some attack resistance measures.
 
 ### CVSS Vector String
 
