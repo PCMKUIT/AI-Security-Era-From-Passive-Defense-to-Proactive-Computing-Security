@@ -9,7 +9,7 @@ This repository contains the full CVSS v4.0 Analysis Report for **CVE-2024-48919
 | Metric | Detail |
 | :--- | :--- |
 | **Vulnerability Type** | **Critical Remote Exploitation** |
-| **CVSS v4.0 Base Score** | **9.3 (CRITICAL)** |
+| **CVSS v4.0 Base Score** | **9.2 (CRITICAL)** |
 | **Attack Vector** | Network (AV:N) |
 | **Exploitability** | Low Complexity (AC:L), No Privileges (PR:N), No User Interaction (UI:N) |
 | **Impact (Vulnerable System)** | Complete compromise of C, I, and A (VC:H, VI:H, VA:H) |
