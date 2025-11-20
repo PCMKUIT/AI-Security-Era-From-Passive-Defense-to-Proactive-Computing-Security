@@ -1,11 +1,3 @@
-Chào bạn, tôi rất sẵn lòng bổ sung thuật toán **CVSS v4.0** vào phần Phụ lục (Appendix) của bạn, giữ nguyên format Markdown rõ ràng và đồng nhất với tài liệu hiện tại.
-
-CVSS v4.0 (hay CVSS-B) có cấu trúc phức tạp hơn v3.1, tập trung vào các nhóm thành phần chính là **Base** (Nền tảng), **Threat** (Mối đe dọa) và **Supplemental** (Bổ sung).
-
-Dưới đây là toàn bộ nội dung bạn có thể copy và thay thế cho file README hiện tại của mình:
-
------
-
 # 🛡️ AI Security Vulnerabilities - 2024 & 2025 Combined Analysis
 
 This repository curates detailed documentation for critical AI-related Common Vulnerabilities and Exposures (CVE) across **2024 and 2025**, based on analysis from Fluency Security and public reports.
@@ -265,7 +257,3 @@ By integrating the full CVSS algorithms:
   * Identify when a CVE may be underrated/overrated,
   * Build internal scoring automation,
   * **Transition smoothly to the CVSS v4.0 standard.**
-
------
-
-Bạn có cần tôi phân tích hoặc tìm thêm thông tin chi tiết về bất kỳ CVE nào trong danh sách này không?
