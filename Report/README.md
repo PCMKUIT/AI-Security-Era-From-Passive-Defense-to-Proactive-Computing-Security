@@ -105,6 +105,3 @@ CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:N
 | **Clearer Scoring Logic** | **Scope is removed**, and Impact is split into two systems, reducing ambiguity and scoring inconsistencies. |
 | **Enhanced DevSecOps** | Tighter integration with **SBOM and VEX** standards for automated vulnerability governance. |
 
------
-
-Would you like me to generate a new CVE score using the CVSS v4.0 formula based on a set of input metrics?
