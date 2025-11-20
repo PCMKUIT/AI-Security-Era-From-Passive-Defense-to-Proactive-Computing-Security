@@ -1,71 +1,271 @@
+Chào bạn, tôi rất sẵn lòng bổ sung thuật toán **CVSS v4.0** vào phần Phụ lục (Appendix) của bạn, giữ nguyên format Markdown rõ ràng và đồng nhất với tài liệu hiện tại.
+
+CVSS v4.0 (hay CVSS-B) có cấu trúc phức tạp hơn v3.1, tập trung vào các nhóm thành phần chính là **Base** (Nền tảng), **Threat** (Mối đe dọa) và **Supplemental** (Bổ sung).
+
+Dưới đây là toàn bộ nội dung bạn có thể copy và thay thế cho file README hiện tại của mình:
+
+-----
+
 # 🛡️ AI Security Vulnerabilities - 2024 & 2025 Combined Analysis
 
-This repository curates detailed documentation for critical AI-related Common Vulnerabilities and Exposures (CVEs) across **2024 and 2025**, based on analysis from Fluency Security and other public reports.
+This repository curates detailed documentation for critical AI-related Common Vulnerabilities and Exposures (CVE) across **2024 and 2025**, based on analysis from Fluency Security and public reports.
 
----
+-----
 
 ## 📊 Combined AI CVE Statistics: By Category
 
 The combined data confirms that **Prompt Injection** and **RCE** are the two biggest and most critical threats to the AI/ML ecosystem.
 
-| Vulnerability Category | Count | Examples (Combined 2024 & 2025) |
-| :--- | :--- | :--- |
-| **Prompt Injection / Logic Abuse** | **6** | CVE-2025-32711, CVE-2024-8309, CVE-2024-5565, CVE-2024-12366, CVE-2025-54132, etc. |
-| **Remote Code Execution (RCE)** | **7** | (Includes RCE from Prompt Injection, Deserialization, Code Injection, and Container Escape) |
-| **Access Control Issues (Auth/IDOR/Escalation)** | **5** | CVE-2025-51867, CVE-2025-5071, CVE-2025-23359, etc. |
-| **File / Path Handling / SSRF** | **2** | CVE-2025-54381 (SSRF), CVE-2025-32018 (Path Traversal) |
-| **UI/Script Injection (XSS)** | 1 | CVE-2025-5570 |
-| **Denial of Service (DoS)** | 1 | CVE-2025-6398 |
+| Vulnerability Category                           | Count | Examples                                                                             |
+| :----------------------------------------------- | :---- | :----------------------------------------------------------------------------------- |
+| **Prompt Injection / Logic Abuse** | **6** | CVE-2025-32711, CVE-2024-8309, CVE-2024-5565, CVE-2024-12366, CVE-2025-54132, etc.   |
+| **Remote Code Execution (RCE)** | **7** | Includes RCE via prompt injection, deserialization, code injection, container escape |
+| **Access Control Issues (Auth/IDOR/Escalation)** | **5** | CVE-2025-51867, CVE-2025-5071, CVE-2025-23359, etc.                                  |
+| **File / Path Handling / SSRF** | **2** | CVE-2025-54381 (SSRF), CVE-2025-32018 (Path Traversal)                               |
+| **UI/Script Injection (XSS)** | 1     | CVE-2025-5570                                                                        |
+| **Denial of Service (DoS)** | 1     | CVE-2025-6398                                                                        |
 
----
+-----
 
 ## 📋 Complete AI CVE List (2024 & 2025)
 
-| CVE ID | Year | Product / Vendor | Vulnerability Type |
-| :--- | :--- | :--- | :--- |
-| **Prompt Injection & Execution** | | | |
-| CVE-2025-32711 | 2025 | Microsoft 365 Copilot | AI command/prompt injection (**EchoLeak**) |
-| **CVE-2024-8309** | **2024** | **LangChain (GraphCypherQAChain)** | SQL Injection via Prompt Injection |
-| **CVE-2024-5565** | **2024** | **Vanna.AI** | Prompt injection leading to **RCE** |
-| **CVE-2024-12366** | **2024** | **PandasAI** | Prompt injection leading to **RCE** |
-| CVE-2025-54132 | 2025 | Cursor AI Editor | Embedded prompt injection |
-| CVE-2025-32018 | 2025 | Cursor AI Editor | Prompt-influenced path traversal |
-| CVE-2025-3248 | 2025 | Langflow | API code injection |
-| **Infrastructure & Deserialization RCE** | | | |
-| CVE-2025-27520 | 2025 | BentoML (v1.4.2) | Unsafe deserialization / **RCE** |
-| CVE-2025-0140 | 2025 | NVIDIA RAPIDS (cuDF/cuML) | Insecure deserialization / **RCE** |
-| CVE-2025-23266 | 2025 | NVIDIA Container Toolkit | Container escape / privilege escalation |
-| CVE-2025-0132 | 2025 | NVIDIA Toolkit | Container escape bypass |
-| CVE-2025-23359 | 2025 | NVIDIA Toolkit | Container escape bypass |
-| **Access Control & Web Flaws** | | | |
-| CVE-2025-54381 | 2025 | BentoML | **SSRF** via file upload |
-| CVE-2025-51867 | 2025 | Deepfiction AI | **IDOR** / cross-account abuse |
-| CVE-2025-5071 | 2025 | AI Engine WP plugin | Missing auth / MCP misuse |
-| CVE-2025-5570 | 2025 | AI Engine WP plugin | **Stored XSS** in chatbot UI |
-| CVE-2025-6398 | 2025 | ASUS AI Suite 3 | Null pointer crash (**DoS**) |
+| CVE ID                                   | Year | Product / Vendor               | Vulnerability Type                         |
+| :--------------------------------------- | :--- | :----------------------------- | :----------------------------------------- |
+| **Prompt Injection & Execution** |      |                                |                                            |
+| CVE-2025-32711                           | 2025 | Microsoft 365 Copilot          | AI command/prompt injection (**EchoLeak**) |
+| **CVE-2024-8309** | 2024 | LangChain (GraphCypherQAChain) | SQL Injection via Prompt Injection         |
+| **CVE-2024-5565** | 2024 | Vanna.AI                       | Prompt injection → **RCE** |
+| **CVE-2024-12366** | 2024 | PandasAI                       | Prompt injection → **RCE** |
+| CVE-2025-54132                           | 2025 | Cursor AI Editor               | Embedded prompt injection                  |
+| CVE-2025-32018                           | 2025 | Cursor AI Editor               | Prompt-influenced path traversal           |
+| CVE-2025-3248                            | 2025 | Langflow                       | API code injection                         |
+| **Infrastructure & Deserialization RCE** |      |                                |                                            |
+| CVE-2025-27520                           | 2025 | BentoML                        | Unsafe deserialization → **RCE** |
+| CVE-2025-0140                            | 2025 | NVIDIA RAPIDS                  | Insecure deserialization → **RCE** |
+| CVE-2025-23266                           | 2025 | NVIDIA Container Toolkit       | Container escape / PrivEsc                 |
+| CVE-2025-0132                            | 2025 | NVIDIA Toolkit                 | Container escape bypass                    |
+| CVE-2025-23359                           | 2025 | NVIDIA Toolkit                 | Container escape bypass                    |
+| **Access Control & Web Flaws** |      |                                |                                            |
+| CVE-2025-54381                           | 2025 | BentoML                        | SSRF (file-based)                          |
+| CVE-2025-51867                           | 2025 | Deepfiction AI                 | IDOR / Account takeover                    |
+| CVE-2025-5071                            | 2025 | AI Engine WP plugin            | Missing auth / MCP misuse                  |
+| CVE-2025-5570                            | 2025 | AI Engine WP plugin            | Stored XSS                                 |
+| CVE-2025-6398                            | 2025 | ASUS AI Suite 3                | Null pointer DoS                           |
 
----
+-----
 
-## 🚨 Key Trends in AI Security (2024-2025)
+## 🚨 Key Trends in AI Security (2024–2025)
 
-### 1. Prompt Injection Dominance and Privilege Escalation
-Prompt Injection vulnerabilities from 2024 (Vanna.AI, PandasAI) established the pattern for **Language-to-Code Execution** attacks. This trend escalated in 2025 with highly sophisticated variants like **Zero-click Prompt Injection** (EchoLeak), proving that manipulating AI's linguistic logic remains a critical attack vector.
+### **1. Prompt Injection Dominance**
 
-### 2. Focus on Infrastructure Over Models
-While Prompt Injection is a logic flaw, a majority of other CVEs target the **supporting infrastructure for AI/ML deployment** (e.g., BentoML, NVIDIA RAPIDS, Container Toolkit). This highlights the crucial importance of securing the entire **AI Supply Chain** and tackling traditional security flaws like Deserialization and Container Escape within AI environments.
+Prompt Injection evolved from simple logic manipulation (2024) → to **zero-click**, environment-aware, and chained privilege escalation attacks in 2025.
 
-### 3. The "Man-in-the-Prompt" Challenge
-The emergence of flaws like **Prompt-influenced path traversal** in Cursor AI Editor shows that attacks are moving to target the **data preprocessing stages** and intermediate layers (Man-in-the-Prompt), where data is transformed before reaching the core model.
+### **2. Infrastructure Attacks Growing Faster Than Model Attacks**
 
----
+The majority of critical AI CVEs involve:
 
-## 💡 Key Insights: Rapid Threat Evolution
+  * Unsafe deserialization
+  * Container escape
+  * GPU/ML pipeline exploitation
+  * File/IO processing abuse
 
-* **Systemic Risk:** The confirmed instances of **Prompt Injection leading to RCE** and **Zero-click** vulnerabilities indicate that AI developers are facing far more serious systemic risks compared to typical application flaws.
-* **Full Pipeline Security:** The data confirms that focusing solely on the AI model is insufficient; security must be applied to the entire **AI pipeline**—from computation libraries (`cuML`) to deployment platforms (`BentoML`) and development tools (`Cursor`).
+These reveal systemic weaknesses beyond the model itself.
 
----
+### **3. The “Man-in-the-Prompt” Layer**
 
-## 🔗 Reference
+Attacks now target **intermediate stages** like:
 
-Based on analysis from [Fluency Security - State of AI Vulnerability 2025](https://blogs.fluencysecurity.com/ai-cves-of-2025/)
+  * AI editors (Cursor)
+  * Data transformation pipelines
+  * LLM-agent orchestration layers
+
+leading to novel issues like **prompt-influenced path traversal**.
+
+-----
+
+## 💡 Key Insights
+
+  * Prompt Injection is no longer a “model flaw” — it's a **full-stack attack surface**.
+  * RCE from AI prompts proves that **AI model outputs must be treated as untrusted input**.
+  * Securing AI systems demands **full-pipeline visibility** from GPU libraries → orchestration → model → UI.
+
+-----
+
+# ➕ Appendix: CVSS Scoring Algorithms (Specification)
+
+This section extends the README with **official CVSS v3.1 and v4.0 equations**, helping analysts understand how severity scores were derived for each CVE.
+
+-----
+
+## **1. CVSS v3.1 Scoring Algorithm (Simplified & Formal Specification)**
+
+The Base Score depends on **Impact** and **Exploitability**:
+
+### **Base Score**
+
+```
+If Impact <= 0: 
+    Base = 0
+Else If Scope = Unchanged:
+    Base = RoundUp( min(Impact + Exploitability, 10) )
+Else If Scope = Changed:
+    Base = RoundUp( min(1.08 × (Impact + Exploitability), 10) )
+```
+
+-----
+
+### **Impact Sub-Score (ISC)**
+
+```
+ISC_Base = 1 - ((1 - C) × (1 - I) × (1 - A))
+
+If Scope = Unchanged:
+    Impact = 6.42 × ISC_Base
+Else:
+    Impact = 7.52 × (ISC_Base - 0.029) 
+             - 3.25 × (ISC_Base - 0.02)^15
+```
+
+-----
+
+### **Exploitability Sub-Score**
+
+```
+Exploitability = 8.22 × AV × AC × PR × UI
+```
+
+-----
+
+## **2. Temporal Score (v3.1)**
+
+```
+Temporal = RoundUp(
+    Base × ExploitCodeMaturity × RemediationLevel × ReportConfidence
+)
+```
+
+-----
+
+## **3. Environmental Score (v3.1)**
+
+Environmental Score recalculates the Base Score using modified metrics.
+
+```
+If Modified Impact <= 0:
+    Environmental = 0
+
+Else If Modified Scope = Unchanged:
+    Environmental = RoundUp(
+        RoundUp(min(M.Impact + M.Exploitability, 10))
+        × E × RL × RC
+    )
+
+Else If Modified Scope = Changed:
+    Environmental = RoundUp(
+        RoundUp(min(1.08 × (M.Impact + M.Exploitability), 10))
+        × E × RL × RC
+    )
+```
+
+-----
+
+### **Modified ISC (v3.1)**
+
+```
+ISC_Modified = min(
+    1 - ((1 - M_C×CR) × (1 - M_I×IR) × (1 - M_A×AR)),
+    0.915
+)
+```
+
+### **Modified Exploitability (v3.1)**
+
+```
+M.Exploitability = 8.22 × M_AV × M_AC × M_PR × M_UI
+```
+
+-----
+
+## **4. CVSS v4.0 (CVSS-B) Scoring Algorithm** 🚀
+
+CVSS v4.0 simplifies the structure by combining Temporal and Environmental concepts into the **Threat** and **Supplemental** groups, and introducing new Impact metrics.
+
+### **Base Score (CVSS-B)**
+
+The Base Score is determined by the **Base Equation** (BE) and the **Impact Subscore** (IS), similar to v3.1, but using new impact variables (VC, VI, VA, SC, SI, SA).
+
+$$
+\text{CVSS-B} = \text{RoundUp}(\text{Min}(\text{BE} \times 10, 10))
+$$Trong đó:
+
+$$\\text{BE} = \\text{Min}(\\text{IS} \\times 1.176, \\text{Exploitability}) + \\text{IS}
+
+$$
+
+-----
+
+### **Exploitability Sub-Score (E)**
+
+Giống như v3.1, nhưng sử dụng các biến $AV$, $AC$, $AT$, $PR$, $UI$.
+
+$$\\text{Exploitability} = 0.55 \\times (8.58 \\times \\text{AV} \\times \\text{AC} \\times \\text{AT} \\times \\text{PR} \\times \\text{UI})
+
+$$
+
+-----
+
+### **Impact Sub-Score (IS)**
+
+Impact Sub-Score là trung bình có trọng số của hai nhóm ảnh hưởng: **Vulnerable System (VC, VI, VA)** và **Subsequent System (SC, SI, SA)**.
+
+$$\\text{IS} = 1 - \\Big( (1-\\text{VC} \\times \\text{VCI}) \\times (1-\\text{VI} \\times \\text{VII}) \\times (1-\\text{VA} \\times \\text{VAI}) \\Big) \\times \\Big( (1-\\text{SC} \\times \\text{SCI}) \\times (1-\\text{SI} \\times \\text{SII}) \\times (1-\\text{SA} \\times \\text{SAI}) \\Big)
+
+$$
+
+-----
+
+### **Threat Score (CVSS-BT)**
+
+Threat Score là sự kết hợp của Base Score và các yếu tố thời gian (Threat).
+
+$$\\text{CVSS-BT} = \\text{RoundUp}(\\text{CVSS-B} \\times \\text{EUT} \\times \\text{RP} \\times \\text{UR})
+$$| Metric | Ý nghĩa |
+| :--- | :--- |
+| **EUT** | Exploit Utility (Độ hữu dụng của khai thác) |
+| **RP** | Remediation Progress (Tiến trình khắc phục) |
+| **UR** | Urgency (Tính cấp bách) |
+
+-----
+
+### **Supplemental Score (CVSS-BTE)**
+
+Supplemental Score bổ sung các yếu tố về **Auto (Tự động hóa)** và **Safety (An toàn)**.
+
+$$
+\text{CVSS-BTE} = \text{CVSS-BT} \quad \text{+ (Auto: High/Low, Safety: Present/Not Present)}
+$$
+
+-----
+
+### **RoundUp Rule (v3.1 & v4.0)**
+
+```
+RoundUp(x) = smallest number (1 decimal) ≥ x  
+Example: RoundUp(4.01) = 4.1
+```
+
+-----
+
+# ✔️ Summary of Importance
+
+By integrating the full CVSS algorithms:
+
+  * Analysts can **justify severity ratings**,
+  * Validate vendor scoring,
+  * Identify when a CVE may be underrated/overrated,
+  * Build internal scoring automation,
+  * **Transition smoothly to the CVSS v4.0 standard.**
+
+-----
+
+Bạn có cần tôi phân tích hoặc tìm thêm thông tin chi tiết về bất kỳ CVE nào trong danh sách này không?
