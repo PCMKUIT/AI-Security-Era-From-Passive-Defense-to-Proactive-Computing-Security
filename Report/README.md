@@ -4,7 +4,7 @@ This table provides a systematic comparison between CVSS v3.1 and CVSS v4.0, hig
 
 ## 📊 Summary of Key Differences
 
-| Feature | CVSS v3.1 | CVSS v4.0 (CVSS-B) | Key Change |
+| Feature | CVSS v3.1 | CVSS v4.0 | Key Change |
 | :--- | :--- | :--- | :--- |
 | **Release Year** | 2019 | 2023 | v4.0 is a **comprehensive redesign** focusing on modern ecosystems. |
 | **Final Score Range** | 0.0 – 10.0 | 0.0 – 10.0 | Score scale remains consistent. |
