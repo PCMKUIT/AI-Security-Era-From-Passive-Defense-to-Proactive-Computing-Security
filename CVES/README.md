@@ -188,7 +188,7 @@ The Base Score is determined by the **Base Equation** (BE) and the **Impact Subs
 
 $$\text{CVSS-B} = \text{RoundUp}(\text{Min}(\text{BE} \times 10, 10))$$
 
-Trong đó:
+Where:
 
 $$\text{BE} = \text{Min}(\text{IS} \times 1.176, \text{Exploitability}) + \text{IS}$$
 
@@ -196,7 +196,7 @@ $$\text{BE} = \text{Min}(\text{IS} \times 1.176, \text{Exploitability}) + \text{
 
 ### **Exploitability Sub-Score (E)**
 
-Giống như v3.1, nhưng sử dụng các biến $AV$, $AC$, $AT$, $PR$, $UI$.
+Similar to v3.1, but using the variables $AV$, $AC$, $AT$, $PR$, $UI$.
 
 $$\text{Exploitability} = 0.55 \times (8.58 \times \text{AV} \times \text{AC} \times \text{AT} \times \text{PR} \times \text{UI})$$
 
@@ -204,7 +204,7 @@ $$\text{Exploitability} = 0.55 \times (8.58 \times \text{AV} \times \text{AC} \t
 
 ### **Impact Sub-Score (IS)**
 
-Impact Sub-Score là trung bình có trọng số của hai nhóm ảnh hưởng: **Vulnerable System (VC, VI, VA)** và **Subsequent System (SC, SI, SA)**.
+The Impact Sub-Score is a weighted average of two impact groups: **Vulnerable System (VC, VI, VA)** and **Subsequent System (SC, SI, SA)**.
 
 $$\text{IS} = 1 - \Big( (1-\text{VC} \times \text{VCI}) \times (1-\text{VI} \times \text{VII}) \times (1-\text{VA} \times \text{VAI}) \Big) \times \Big( (1-\text{SC} \times \text{SCI}) \times (1-\text{SI} \times \text{SII}) \times (1-\text{SA} \times \text{SAI}) \Big)$$
 
@@ -212,25 +212,25 @@ $$\text{IS} = 1 - \Big( (1-\text{VC} \times \text{VCI}) \times (1-\text{VI} \tim
 
 ### **Threat Score (CVSS-BT)**
 
-Threat Score là sự kết hợp của Base Score và các yếu tố thời gian (Threat).
+The Threat Score is a combination of the Base Score and time-dependent factors (Threat).
 
 $$\text{CVSS-BT} = \text{RoundUp}(\text{CVSS-B} \times \text{EUT} \times \text{RP} \times \text{UR})$$
 
-| Metric | Ý nghĩa |
+| Metric | Meaning |
 | :--- | :--- |
-| **EUT** | Exploit Utility (Độ hữu dụng của khai thác) |
-| **RP** | Remediation Progress (Tiến trình khắc phục) |
-| **UR** | Urgency (Tính cấp bách) |
+| **EUT** | Exploit Utility |
+| **RP** | Remediation Progress |
+| **UR** | Urgency |
 
 -----
 
 ### **Supplemental Score (CVSS-BTE)**
 
-Supplemental Score bổ sung các yếu tố về **Auto (Tự động hóa)** và **Safety (An toàn)**.
+The Supplemental Score adds factors for **Automation** and **Safety**.
 
 > $\text{CVSS-BTE} = \text{CVSS-BT} \quad \text{+ (Auto: High/Low, Safety: Present/Not Present)}$
 
-(Lưu ý: Công thức này chỉ là chỉ định khái niệm, giá trị số cụ thể phụ thuộc vào chuẩn CVSS v4.0 chính thức.)
+(Note: This formula is conceptual. The specific numerical values depend on the official CVSS v4.0 standard.)
 
 -----
 
@@ -240,3 +240,15 @@ Supplemental Score bổ sung các yếu tố về **Auto (Tự động hóa)** v
 RoundUp(x) = smallest number (1 decimal) ≥ x  
 Example: RoundUp(4.01) = 4.1
 ```
+
+-----
+
+# ✔️ Summary of Importance
+
+By integrating the full CVSS algorithms:
+
+  * Analysts can **justify severity ratings**,
+  * Validate vendor scoring,
+  * Identify when a CVE may be underrated/overrated,
+  * Build internal scoring automation,
+  * **Transition smoothly to the CVSS v4.0 standard.**
