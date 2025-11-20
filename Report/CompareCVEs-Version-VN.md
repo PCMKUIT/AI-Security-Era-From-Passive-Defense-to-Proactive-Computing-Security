@@ -4,7 +4,7 @@ Bảng so sánh này cung cấp cái nhìn hệ thống giữa CVSS v3.1 và CVS
 
 ## 📊 Tóm tắt Khác biệt Chính
 
-| Nội dung | CVSS v3.1 | CVSS v4.0 (CVSS-B) | Thay đổi Chính |
+| Nội dung | CVSS v3.1 | CVSS v4.0 | Thay đổi Chính |
 | :--- | :--- | :--- | :--- |
 | **Năm Ra mắt** | 2019 | 2023 | v4.0 là bản **cải tiến toàn diện**, tập trung vào các hệ thống hiện đại. |
 | **Thang điểm** | 0.0 – 10.0 | 0.0 – 10.0 | Thang điểm cuối không thay đổi. |
