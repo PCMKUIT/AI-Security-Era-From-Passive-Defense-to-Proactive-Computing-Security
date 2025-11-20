@@ -1,7 +1,3 @@
-Dưới đây là so sánh chi tiết và có cấu trúc giữa **CVSS v3.1** và **CVSS v4.0** dưới dạng file Markdown, được trình bày với format đẹp và dễ đọc.
-
------
-
 # ⭐ Detailed Comparison: CVSS v3.1 vs. CVSS v4.0
 
 This table provides a systematic comparison between CVSS v3.1 and CVSS v4.0, highlighting the design objectives, components, scoring methodology, and key changes.
